@@ -1,0 +1,106 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: blanchedalmond;
+}
+
+nav {
+    width: 100%;
+    background-color: brown;
+
+}
+
+.navbar {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5vh;
+}
+
+.navItem {
+    background-color: beige;
+    padding: 3vh;
+    border-radius: 15%;
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    width: 15vh;
+    background-color: orangered;
+    border-radius: 15%;
+
+}
+
+.blog-post {}
+
+.blog-header {
+    border: 3px solid blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    margin-top: 3vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    background-color: azure;
+
+}
+
+.blog-title {
+    padding-left: 10vh;
+}
+
+.blog-user {
+    text-align: right;
+    padding-right: 10vh;
+}
+
+.blog-content {
+    border: 3px solid green;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    padding-left: 9vh;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    background-color: greenyellow;
+}
+
+.existing-blog {
+    background-color: aquamarine;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    margin-top: 3vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+
+.existing-title {
+    padding-left: 10vh;
+}
+
+.existing-date {
+    text-align: right;
+    padding-right: 10vh;
+}
+
+form {
+
+    display: grid;
+    justify-content: center;
+    width: 20vh;
+}
