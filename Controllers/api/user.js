@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt")
 
 router.get('/', (req, res) => {
 
-    User.findAll({ include: [Profile] }
+    User.findAll(
     ).then(allUser =>
 
         res.json(allUser)
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 
 router.get('/current-user', (req, res) => {
     User.findOne({
-        include: [Profile],
+        include: [User],
         where: {
             id: req.session.userInfo.id
         }

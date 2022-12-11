@@ -14,25 +14,27 @@ const server = http.createServer(app)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// session adding part over here 
-// const sess = {
-//     secret: 'Super secret secret',
-//     cookie: {
-//         // Stored in milliseconds
-//         maxAge: 24 * 60 * 60 * 1000, // expires after 1 day
-//     },
-//     resave: false,
-//     saveUninitialized: true,
-//     store: new SequelizeStore({
-//         db: sequelize,
-//     }),
-// };
+// session adding part over here
+const sess = {
+    secret: 'Super secret secret',
+    cookie: {
+        // Stored in milliseconds
+        maxAge: 24 * 60 * 60 * 1000, // expires after 1 day
+    },
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+        db: sequelize,
+    }),
+};
 
-// app.use(session(sess));
+
 
 // Static directory
 app.use(express.static('public'));
-
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(session(sess));
 // handlebar linking over here
 const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
@@ -41,8 +43,8 @@ app.set('view engine', 'handlebars');
 // route position 
 app.use(routes);
 
-// sequelize.sync({ force: false }).then(function () {
-server.listen(PORT, function () {
-    console.log('App listening on PORT ' + PORT);
+sequelize.sync({ force: false }).then(function () {
+    server.listen(PORT, function () {
+        console.log('App listening on PORT ' + PORT);
+    });
 });
-// });

@@ -1,8 +1,8 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
 
-    const username = document.querySelector('#username-login').value.trim();
-    const password = document.querySelector('#password-login').value.trim();
+    const username = document.querySelector('#user').value.trim();
+    const password = document.querySelector('#pass').value.trim();
     const failure = document.querySelector('#failure');
 
     if (username && password) {
@@ -13,6 +13,7 @@ const loginFormHandler = async (event) => {
                 password: password
             }),
             headers: { 'Content-Type': 'application/json' },
+
         });
 
         if (response.ok) {

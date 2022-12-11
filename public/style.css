@@ -2,6 +2,10 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -25,7 +29,7 @@ nav {
 .navItem {
     background-color: beige;
     padding: 3vh;
-    border-radius: 15%;
+    border-radius: 20px;
 }
 
 .titleContainer {
@@ -41,7 +45,7 @@ nav {
     padding-bottom: 2vh;
     width: 15vh;
     background-color: orangered;
-    border-radius: 15%;
+    border-radius: 15px;
 
 }
 
