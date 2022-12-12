@@ -1,6 +1,19 @@
 <body>
 
     {{>navbar}}
-    {{>existing}}
+    {{#each post}}
+    <div class="existing-blog">
+
+        <h4 class="existing-title">{{title}}</h4>
+        <h4 class="existing-date">{{createdAt}}</h4>
+        <button id={{id}} type="button" onclick="deletePost(event)">delete</button>
+    </div>
+    {{/each}}
+
+    <div class='button-holder'>
+
+        <a href="/newPost" class="new-post-button">+ new post
+        </a>
+    </div>
 
 </body>

@@ -1,6 +1,18 @@
 <body>
     {{>navbar}}
-    {{>post}}
+    {{#each post}}
+    <div class="blog-post">
+        <div class="blog-header">
 
+            <h3 class="blog-title">{{title}}</h3>
 
+            <h5 class="blog-user">{{username}}, {{createdAt}}</h5>
+        </div>
+
+        <div class="blog-content">
+            {{content}}
+        </div>
+
+    </div>
+    {{/each}}
 </body>

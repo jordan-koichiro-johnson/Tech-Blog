@@ -10,6 +10,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: blanchedalmond;
+    height: 100vh;
 }
 
 nav {
@@ -106,5 +107,30 @@ form {
 
     display: grid;
     justify-content: center;
+    width: 100vh;
+}
+
+.button-holder {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    top: 100vh;
+}
+
+.new-post-button {
+    background-color: brown;
+    border-radius: 30px;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    padding: 2vh
+}
+
+input {
     width: 20vh;
+
+}
+
+#content {
+    height: 20vh;
+    width: 40vh;
 }
