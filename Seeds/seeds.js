@@ -1,5 +1,5 @@
-const sequelize = require("../config/connection");
-const { User, Post, Comment } = require("../models");
+const sequelize = require("../Config/connection");
+const { User, Post, Comment } = require("../Models");
 
 
 const seed = async () => {
