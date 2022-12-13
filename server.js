@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // session adding part over here
 const sess = {
-    secret: 'Super secret secret',
+    secret: process.env.SESSION_SECRET,
     cookie: {
         // Stored in milliseconds
         maxAge: 24 * 60 * 60 * 1000, // expires after 1 day
