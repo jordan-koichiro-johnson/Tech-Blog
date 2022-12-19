@@ -74,10 +74,13 @@ nav {
 }
 
 .blog-content {
+    display: flex;
+    justify-content: space-between;
     border: 3px solid green;
     margin-left: 10vh;
     margin-right: 10vh;
     padding-left: 9vh;
+    padding-right: 9vh;
     padding-bottom: 2vh;
     padding-top: 2vh;
     background-color: greenyellow;
